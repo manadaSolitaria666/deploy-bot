@@ -146,8 +146,8 @@ async def recibir_experiencia(update: Update, context: ContextTypes.DEFAULT_TYPE
     """Guarda la experiencia, la valida y pregunta el nivel de inglés."""
     try:
         experiencia = int(update.message.text)
-        if experiencia < 4:
-            await update.message.reply_text("Lo sentimos, se requieren al menos 4 años de experiencia. Proceso finalizado.")
+        if experiencia < 2:
+            await update.message.reply_text("Lo sentimos, se requieren al menos 2 años de experiencia. Proceso finalizado.")
             return ConversationHandler.END
         context.user_data['experiencia'] = experiencia
         await update.message.reply_text("¿Cuál es tu porcentaje de inglés? (ej. 80)")
@@ -284,4 +284,5 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
