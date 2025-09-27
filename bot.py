@@ -29,7 +29,7 @@ SPREADSHEET_NAME = os.environ.get("SPREADSHEET_NAME", "Candidatos Bot")
 CARRERAS_VALIDAS = [
     "ingeniería", "sistemas", "computación", "computacion", "informática", 
     "informatica", "software", "ciberseguridad", "tecnologías de la información", 
-    "tics", "desarrollo", "Contabilidad"
+    "tics", "desarrollo", "Contabilidad", "contabilidad"
 ]
 ESPECIALIDADES_VALIDAS = ["ing.software", "ciberseguridad", "desarrollo de software"]
 
@@ -175,7 +175,7 @@ async def recibir_carrera(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     carrera = update.message.text.lower()
     if any(keyword in carrera for keyword in CARRERAS_VALIDAS):
         context.user_data['carrera'] = update.message.text
-        await update.message.reply_text("Carrera válida. ¿Cuál es tu área de especialidad? (ej. ing. software, ciberseguridad, desarrollo de software)")
+        await update.message.reply_text("Carrera válida. ¿Cuál es tu área de especialidad? (ej. ing. software, ciberseguridad,contabilidad, desarrollo de software)")
         return ESPECIALIDAD
     else:
         await update.message.reply_text("Lo sentimos, buscamos perfiles con carreras relacionadas a la tecnología. Proceso finalizado.")
@@ -284,6 +284,7 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
 
 
