@@ -236,7 +236,7 @@ async def recibir_cv(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         ]
         sheet.append_row(fila)
 
-        await update.message.reply_text("¡Hemos recibido tu CV! Gracias por completar el proceso. Nos pondremos en contacto contigo pronto.")
+        await update.message.reply_text("¡Hemos recibido tu CV! GRACIAS POR COMUNICARSE CON NOSOTROS Gracias por completar el proceso. Nos pondremos en contacto contigo pronto.")
 
     except HttpError as error:
         print(f"Ocurrió un error con la API de Google: {error}")
@@ -284,6 +284,7 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
 
 
