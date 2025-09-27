@@ -29,7 +29,7 @@ SPREADSHEET_NAME = os.environ.get("SPREADSHEET_NAME", "Candidatos Bot")
 CARRERAS_VALIDAS = [
     "ingeniería", "sistemas", "computación", "computacion", "informática", 
     "informatica", "software", "ciberseguridad", "tecnologías de la información", 
-    "tics", "desarrollo"
+    "tics", "desarrollo", "Contabilidad"
 ]
 ESPECIALIDADES_VALIDAS = ["ing.software", "ciberseguridad", "desarrollo de software"]
 
@@ -284,6 +284,7 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
 
 
