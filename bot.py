@@ -160,7 +160,7 @@ async def recibir_ingles(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     """Guarda el nivel de inglés, lo valida y pregunta la carrera."""
     try:
         ingles = int(update.message.text.replace('%', ''))
-        if ingles < 40:
+        if ingles < 80:
             await update.message.reply_text("Lo sentimos, se requiere un mínimo de 40% de inglés. Proceso finalizado.")
             return ConversationHandler.END
         context.user_data['ingles'] = ingles
@@ -284,6 +284,7 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
 
 
