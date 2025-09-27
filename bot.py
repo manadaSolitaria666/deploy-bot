@@ -132,8 +132,8 @@ async def recibir_edad(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
     """Guarda la edad, la valida y pregunta la experiencia."""
     try:
         edad = int(update.message.text)
-        if edad < 18:
-            await update.message.reply_text("Lo sentimos, debes ser mayor de 18 años para continuar. Proceso finalizado.")
+        if edad < 20:
+            await update.message.reply_text("Lo sentimos, debes ser mayor de 20 años para continuar. Proceso finalizado.")
             return ConversationHandler.END
         context.user_data['edad'] = edad
         await update.message.reply_text("¿Cuántos años de experiencia tienes?")
@@ -284,5 +284,6 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
 
